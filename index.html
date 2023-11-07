@@ -11,14 +11,33 @@
 
 <body>
     <div id="space"></div>
-    <div id="audio-player">
-        <img id="play-pause-button" src="images/play.svg">
-        <h4 id="current-time">00:00</h4>
-        <h4>/</h4>
-        <h4 id="total-time">0:00</h4>
-        <input id="seek-bar" type="range" min="0" value="0" disabled>
+    <div class="box-style" id="image-container" >
+        <div id="images">
+            <img id="image1" src="images/AC2.webp">
+            <img id="image2" src="images/AC1.webp" style="display:none;">
+            <img id="image3" src="images/AC3.jpg" style="display:none;">
+        </div>
     </div>
-    <audio id="player" src="audio/Soft-Background-for-Interview.webm"></audio>
+    <div id="audio-player" class="box-style">
+        <div id="section-1">
+            <img id="play-pause-button" src="images/play.svg">
+            <h4 id="current-time">00:00</h4>
+            <h4>/</h4>
+            <h4 id="total-time">0:00</h4>
+            <div id="empty-space"></div>
+            <input id="seek-bar" type="range" min="0" value="0" disabled>
+        </div>
+        <div id="section-2">
+            <div id="track-changer">
+                <button id="prev" ><img src="images/previous.png"></button>
+                <button id="next"><img src="images/next.png"></button>
+            </div>
+            <div id="vol-container">
+                <h4 id="vol-text">Vol</h4>
+                <input id="volume-slider" type="range" min="0" value="100">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

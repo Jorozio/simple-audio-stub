@@ -3,7 +3,7 @@
     padding: 0;
 }
 #space{
-    height: 45vh;
+    height: 18vh;
     width: 100vw;
 }
 body{
@@ -13,20 +13,61 @@ body{
     align-items: center;
     background-color: rgb(182, 192, 169);
 }
+
 #audio-player{
     width: 330px;
-    height: 50px;
+    height: 70px;
     border-radius: 9px;
     background-color: rgb(255, 255, 255);
+    padding: 2%;
+    box-shadow: 5px 5px 5px #535353;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+#image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 330px;
+    margin-bottom: 20px;
+    /* container styles */
+    border-radius: 9px;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    box-shadow: 5px 5px 5px #535353;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+#images{
+  
+    /* border-radius: 9px; */
+    width: 320px;
+    height: 320px;
+}
+#section-1{
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-    padding: 1%;
-    box-shadow: 5px 5px 5px rgb(83, 83, 83);
-    border: 1px;
-    border-color: black;
-    border-style: solid;
+}
+#section-2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 3%;
+    padding-top: 1%;
+}
+
+#vol-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
 }
 #play-pause-button{
     width: 25px;
@@ -35,8 +76,24 @@ body{
     margin: 2%;
     padding-right: 2%;
 }
+/* this styles the input directly, targeting the html */
+input[type="range"] {
+    accent-color: rgb(72, 72, 72);
+  }
+  input[type="range"]:active{
+    accent-color: rgb(96, 124, 107);
+  }
 #seek-bar{
     width: 170px;
+    margin-left: 4%;
+    cursor: pointer;
+}
+#empty-space{
+    width: 0;
+    height: 0;
+}
+#volume-slider{
+    width: 100px;
     margin-left: 4%;
     cursor: pointer;
 }
@@ -50,4 +107,70 @@ h4{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     user-select: none;
+}
+#track-changer{
+    /* background-color: aqua; */
+    margin-top: 1%;
+    height: 30px;
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* targetting the specific images */
+img[src="images/next.png"]{
+    width: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+img[src ="images/previous.png"]{
+    width: 14px;
+    padding-right: 4%;
+    cursor: pointer;
+    /* st */
+    user-select: none;
+}
+img[src="images/next.png"]:active,img[src="images/previous.png"]:active{
+    width: 16px;
+}
+img[src="images/AC1.webp"],img[src="images/AC2.webp"],img[src="images/AC3.jpg"]{
+    width: 320px;
+    height: 320px;
+    border-radius: 2%;
+}
+/* removes the styling of the button */
+button{
+    background: none;
+	color: inherit;
+	border: none;
+}
+
+@media screen and (min-width: 1000px){
+    #images{
+  
+        width: 360px;
+        height: 360px;
+    }
+    img[src="images/AC1.webp"],img[src="images/AC2.webp"],img[src="images/AC3.jpg"]{
+        width: 360px;
+        height: 360px;
+    }
+    #section-2{
+        padding: 2%;
+        padding-top: 0.3%;
+        
+    }
+    #empty-space{
+        width: 40px;
+    }
+    #audio-player{
+        padding: 1%;
+        width: 360px;
+    }
+    #track-changer{
+        width: 215px;
+    }
 }
